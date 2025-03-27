@@ -22,8 +22,10 @@ class PaisController extends Controller
      */
     public function create()
     {
-        return view('pais.new');
+        $paises = DB::table('tb_pais')->get(); // Obtiene los países de la base de datos
+        return view('pais.new', ['paises' => $paises]); // Pasa la variable a la vista
     }
+
 
     /**
      * Store a newly created resource in storage.
