@@ -15,10 +15,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Code</th>
-                    <th scope="col">Comune</th>
-                    <th scope="col">Municipality</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Comuna</th>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Accion</th>
                 </tr>
             </thead>
             <tbody>
