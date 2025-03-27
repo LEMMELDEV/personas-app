@@ -83,10 +83,6 @@ class MunicipioController extends Controller
     }
 
 
-
-
-
-
     public function update(Request $request, $id)
     {
         $municipio = Municipio::find($id);
