@@ -14,13 +14,13 @@ class ComunaController extends Controller
      */
     public function index()
     {
-        // $comunas = Comuna::all();
         $comunas = DB::table('tb_comuna')
             ->join('tb_municipio', 'tb_comuna.muni_codi', '=', 'tb_municipio.muni_codi')
-            ->select('tb_comuna.*', "tb_municipio.muni_nomb")
+            ->select('tb_comuna.*', 'tb_municipio.muni_nomb')
             ->get();
-        return view('comuna.index', ['comunas' => $comunas]);
+        return json_encode(['comunas' => $comunas]);
     }
+
 
     /**
      * Show the form for creating a new resource.
