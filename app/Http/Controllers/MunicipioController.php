@@ -11,15 +11,15 @@ class MunicipioController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        // $comunas = Comuna::all();
         $municipios = DB::table('tb_municipio')
-            ->join('tb_departamento', 'tb_municipio.depa_codi', '=', 'tb_departamento.depa_codi')
-            ->select('tb_municipio.*', "tb_departamento.depa_nomb")
+            ->orderBy('muni_nomb')
             ->get();
-        return view('municipio.index', ['municipios' => $municipios]);
+        return json_encode(['municipios' => $municipios]);
     }
 
 
